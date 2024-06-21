@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:rigveda_app/view/Doha_Info/doha_info_Screen.dart';
 
 import '../../provider/json_provider.dart';
 
@@ -68,6 +69,7 @@ class DohaListScreen extends StatelessWidget {
                                 InkWell(
                                   onTap: () {
                                     ProviderFalse.changeIndex(index);
+                                    Hindi=1;
                                     Navigator.pushNamed(context, '/DohaInfo');
 
                                   },

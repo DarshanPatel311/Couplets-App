@@ -1,12 +1,19 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 
 import '../../provider/json_provider.dart';
 
-class InfoScreen extends StatelessWidget {
+class InfoScreen extends StatefulWidget {
   const InfoScreen({super.key});
 
+  @override
+  State<InfoScreen> createState() => _InfoScreenState();
+}
+
+class _InfoScreenState extends State<InfoScreen> {
   @override
   Widget build(BuildContext context) {
     JsonProvider ProviderTrue=Provider.of<JsonProvider>(context);
@@ -22,7 +29,7 @@ class InfoScreen extends StatelessWidget {
           Stack(
             children: [
               Container(
-                height: 900,
+                height: 860,
                 child: Image.asset(
                   'assets/img/IMG-20240621-WA0014.jpg',
                   fit: BoxFit.cover,
@@ -58,7 +65,7 @@ class InfoScreen extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 350,left: 60,right: 50),
                 child: Text(
-                  ProviderTrue.Data2[ProviderFalse.currentIndex].Eng as String,style: TextStyle(
+                  (Hindi==1)?ProviderTrue.Data2[ProviderFalse.currentIndex].hindi as String :text as String,style: TextStyle(
                   fontSize: 22,
                   fontWeight: FontWeight.bold
                 ),
@@ -69,6 +76,123 @@ class InfoScreen extends StatelessWidget {
           )
         ],
       ),
+      bottomNavigationBar: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+
+          GestureDetector(
+            onTap: () {
+             setState(() {
+               Gujrati=0;
+               Hindi=0;
+               Eng=1;
+               if (Eng==1){
+                 text=ProviderTrue.Data2[ProviderFalse.currentIndex].Eng as String;
+               }
+               else{
+                 text=ProviderTrue.Data2[ProviderFalse.currentIndex].hindi as String;
+
+               }
+               print(text);
+             });
+            },
+            child: Container(
+              height: 70,
+              width: 140,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/img/Button.png"),
+                  fit: BoxFit.cover
+                )
+              ),
+              child: Center(
+                child: Text("Engalish",style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17
+                ),),
+              ),
+
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+            setState(() {
+              Gujrati=0;
+              Eng=0;
+              Hindi=1;
+              if (Hindi==1){
+                text=ProviderTrue.Data2[ProviderFalse.currentIndex].hindi as String;
+              }
+              else{
+                text=ProviderTrue.Data2[ProviderFalse.currentIndex].hindi as String;
+
+              }
+              print(text);
+            });
+            },
+            child: Container(
+              height: 70,
+              width: 140,
+              decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("assets/img/Button.png"),
+                  fit: BoxFit.cover
+                )
+              ),
+              child: Center(
+                child: Text("Hindi",style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 17
+                ),),
+              ),
+
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+
+              setState(() {
+
+                Hindi=0;
+                Eng=0;
+                Gujrati=1;
+
+                if (Gujrati==1){
+                  text=ProviderTrue.Data2[ProviderFalse.currentIndex].gujrati as String;
+                }
+                else{
+                  text=ProviderTrue.Data2[ProviderFalse.currentIndex].hindi as String;
+
+                }
+                print(text);
+              });
+
+            },
+            child: Container(
+              height: 70,
+              width: 140,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage("assets/img/Button.png"),
+                      fit: BoxFit.cover
+                  )
+              ),
+              child: Center(
+                child: Text("Gujrati",style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 17
+                ),),
+              ),
+
+            ),
+          ),
+        ],
+
+      ),
     );
   }
 }
+int Gujrati=0;
+int Eng=0;
+int Hindi=1;
+String? text;

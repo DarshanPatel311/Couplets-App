@@ -1,10 +1,13 @@
 import 'dart:convert';
+import 'dart:ffi';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'package:rigveda_app/model/json_model.dart';
 
 class JsonProvider extends ChangeNotifier{
+
    List Data=[];
    List <JsonModel>Data2=[];
    JsonModel? jsonModel;
@@ -32,6 +35,25 @@ class JsonProvider extends ChangeNotifier{
      _currentIndex = index;
    }
    int get currentIndex => _currentIndex;
+   int gujrati=0;
+   int Eng=0;
+   int Hindi=1;
+   String? text;
+
+   void Gujrati(){
+     Hindi=0;
+     Eng=0;
+     gujrati=1;
+
+     if (Gujrati==1){
+
+     }
+     else{
+
+
+     }
+
+   }
 
 
 
