@@ -26,6 +26,12 @@ class JsonProvider extends ChangeNotifier{
 
 
     }
+   int _currentIndex = 0;
+   void changeIndex(int index)
+   {
+     _currentIndex = index;
+   }
+   int get currentIndex => _currentIndex;
 
 
 

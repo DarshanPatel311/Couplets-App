@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rigveda_app/provider/json_provider.dart';
 import 'package:rigveda_app/view/Doha/doha_Screen.dart';
+import 'package:rigveda_app/view/Doha_Info/doha_info_Screen.dart';
 import 'package:rigveda_app/view/Home/home_screen.dart';
 
 void main() {
@@ -22,6 +23,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/':(context) => HomeScreen(),
         '/DohaList':(context) => DohaListScreen(),
+        '/DohaInfo':(context) => InfoScreen(),
 
       },
     );
