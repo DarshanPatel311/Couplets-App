@@ -16,6 +16,7 @@ Welcome to the Couplets App, a beautifully designed Flutter application that bri
 ## ✨ Features
 
 - **Extensive Collection**: Browse through an extensive collection of couplets.
+- **Multi-language Support**:Recognizing the diversity of languages in which the Bhagvat Geeta has been translated, "Departure" is a multi-language app.
 - **Detailed Explanations**: View detailed explanations and translations for each couplet.
 - **Bookmark Favorites**: Bookmark your favorite couplets for quick access.
 - **Search Functionality**: Search for couplets by keywords, authors, or topics.
@@ -26,10 +27,28 @@ Welcome to the Couplets App, a beautifully designed Flutter application that bri
 
 ## 📸 Screenshots
 
-![Home Screen](screenshots/home_screen.png)
-![Couplet Details](screenshots/couplet_details.png)
-![Favorites](screenshots/favorites.png)
-![Search](screenshots/search.png)
+
+
+<p align='center'>
+  <img src='https://github.com/DarshanPatel311/Dohe_App/assets/143177575/754999d4-c790-4eb2-abab-e81af9fa01f1' width=240>
+ <img src='https://github.com/DarshanPatel311/Dohe_App/assets/143177575/d771cc2d-2899-4288-9fdb-e3948a32329d' width=240>
+  <img src='https://github.com/DarshanPatel311/Dohe_App/assets/143177575/07ba809e-7225-4a0d-b28c-c6311bdf1137' width=240>
+  <img src='https://github.com/DarshanPatel311/Dohe_App/assets/143177575/21246b41-6ffa-4b32-822f-f714d367e613' width=240>
+  <img src='https://github.com/DarshanPatel311/Dohe_App/assets/143177575/365d98f0-f8ac-45d4-9fa4-f750c9031d12' width=240>
+  <img src='https://github.com/DarshanPatel311/Dohe_App/assets/143177575/df1f1718-c566-4e5c-96aa-1b785a48e70d' width=240>
+
+</p>
+
+### Video
+
+
+https://github.com/DarshanPatel311/Dohe_App/assets/143177575/ac1d3a21-06ab-4d6a-8f9a-7de4e1132f97
+
+
+
+
+
+
 
 ## 🚀 Getting Started
 
